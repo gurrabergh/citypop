@@ -50,7 +50,7 @@ class City extends React.Component {
   render() {
     const fetchSuccess = this.state.success
     let headline;
-    if (fetchSuccess) {
+    if (fetchSuccess) { // displays loading symbol/message until data is loaded
       headline = <div className='population'>Population
       <h2>{this.state.population}</h2></div>
     } else {
@@ -66,5 +66,6 @@ class City extends React.Component {
     );
   }
 }
+
 
 export default City;

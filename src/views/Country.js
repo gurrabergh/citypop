@@ -80,7 +80,7 @@ class City extends React.Component {
     const fetchSuccess = this.state.success
     let headline;
     let list;
-    if (fetchSuccess) {
+    if (fetchSuccess) { // displays loading symbol/message until data is loaded
       list = this.CityList()
     } else {
       headline = <div><p>Loading...</p><SyncLoader/></div>
