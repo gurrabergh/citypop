@@ -6,8 +6,9 @@ Chose to search for a city or a country. Searching for a city will show the city
 
 ## Get started
 
-- 1. Download this repository
-- 2. `npm install`
+### `npm install`
+
+Install all dependencies.
 
 ### `npm start`
 
@@ -16,11 +17,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
