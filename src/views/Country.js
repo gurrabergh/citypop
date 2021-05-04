@@ -1,8 +1,10 @@
 import React from 'react';
+import UndoIcon from '@material-ui/icons/Undo';
+
 class City extends React.Component {
   constructor(props) {
     super(props);
-    this.country = this.props.location.state.detail;
+    this.country = this.props.location.state.detail.toLowerCase();
     this.state = {cities: [], success: false}
   }
 
@@ -25,16 +27,28 @@ class City extends React.Component {
           state: { detail: "Country not found. Please try again."}
         })
       }
+    }).catch(TypeError => {
+      this.props.history.push({
+        pathname: '/search-city',
+        state: { detail: "Network error. Please try again."}
+      })
     });
   }
 
   CityList = () => {
     let cities = this.state.cities;
     return cities.map((city) => (
-      <div className="population">
-        <p id={city.name}>{city.toUpperCase()}</p>
+      <div key={city} className="population">
+        <p>{city.toUpperCase()}</p>
       </div>
     ));
+  }
+
+  goBack = () => {
+    this.props.history.push({
+      pathname: '/search-country',
+      state: { detail: ""}
+    })
   }
 
 
@@ -57,6 +71,7 @@ class City extends React.Component {
         <h1>CityPop</h1>
         <h4>{this.country.toUpperCase()}</h4>
         {headline}{list}
+        <button id="search" onClick={this.goBack}><UndoIcon className="search"/></button>
       </main>
     );
   }

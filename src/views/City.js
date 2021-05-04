@@ -1,5 +1,6 @@
 import React from 'react';
 import user from '../user.js';
+import UndoIcon from '@material-ui/icons/Undo';
 
 class City extends React.Component {
   constructor(props) {
@@ -32,6 +33,13 @@ class City extends React.Component {
     });
   }
 
+  goBack = () => {
+    this.props.history.push({
+      pathname: '/search-country',
+      state: { detail: ""}
+    })
+  }
+
   componentDidMount() {
     this.setState({population: null});
     this.fetchPopulation();
@@ -51,6 +59,7 @@ class City extends React.Component {
         <h4>{this.city.toUpperCase()}</h4>
         <div className="population">{headline}
         <h2>{this.state.population}</h2></div>
+        <button id="search" onClick={this.goBack}><UndoIcon className="search"/></button>
       </main>
     );
   }
