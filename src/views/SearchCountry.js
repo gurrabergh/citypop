@@ -14,7 +14,7 @@ class SearchCountry extends React.Component {
   updateInput(event) {
     this.setState({value: event.target.value})
   }
-
+  //after search, go to country page, include country name as state value for the API call
   searchCountry = (event) => {
     event.preventDefault();
     this.props.history.push({
@@ -26,7 +26,7 @@ class SearchCountry extends React.Component {
   render() {
     const message = this.message;
     let msg;
-    if (this.message !== "") {
+    if (this.message !== '') {
       msg = <p>{message}</p>;
     }
     return (
@@ -35,9 +35,9 @@ class SearchCountry extends React.Component {
         <h4>SEARCH BY COUNTRY</h4>
         {msg}
         <form onSubmit={this.searchCountry}>
-        <input type="text" placeholder="Enter a country" className="searchInput" onChange={this.updateInput}></input>
+        <input type='text' placeholder='Enter a country' className='searchInput' onChange={this.updateInput}></input>
         </form>
-        <button id="search" onClick={this.searchCountry}><SearchIcon className="search"/></button>
+        <button id='search' onClick={this.searchCountry}><SearchIcon className='search'/></button>
       </main>
     );
   }

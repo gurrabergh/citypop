@@ -36,6 +36,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   border: 1px solid  black;
+  display: block;
 }
 
 #search:hover {
@@ -56,4 +57,17 @@ a {
   align-content: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.cities {
+  width: 20%;
+  height: 10%;
+  border: 1px solid black;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cities:hover {
+  background-color: grey;
 }

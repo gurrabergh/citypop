@@ -5,8 +5,8 @@ class Start extends React.Component {
     return (
       <main>
         <h1>CityPop</h1>
-        <Link to="/search-city" ><button className="start-button">SEARCH BY CITY</button></Link>
-        <Link to="/search-country"><button className="start-button">SEARCH BY COUNTRY</button></Link>
+        <Link to='/search-city' ><button className='start-button'>SEARCH BY CITY</button></Link>
+        <Link to='/search-country'><button className='start-button'>SEARCH BY COUNTRY</button></Link>
       </main>
     );
   }
