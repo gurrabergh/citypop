@@ -27,7 +27,7 @@ class SearchCountry extends React.Component {
         <h1>CityPop</h1>
         <h4>SEARCH BY COUNTRY</h4>
         <form onSubmit={this.searchCountry}>
-        <input type="text" placeholder="Enter a city" className="searchInput" onChange={this.updateInput}></input>
+        <input type="text" placeholder="Enter a country" className="searchInput" onChange={this.updateInput}></input>
         </form>
         <button id="search" onClick={this.searchCountry}><SearchIcon className="search"/></button>
       </main>

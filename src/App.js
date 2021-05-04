@@ -11,8 +11,8 @@ const App = () => (
       <Route exact path="/" component={Start} />
       <Route exact path="/search-country" component={SearchCountry} />
       <Route exact path="/search-city" component={SearchCity} />
-      <Route path="/search-city/:city" component={City} />
-      <Route path="/search-country/:country" component={Country} />
+      <Route path="/search-city/city" component={City} />
+      <Route path="/search-country/country" component={Country} />
     </div>
   </Router>
 );

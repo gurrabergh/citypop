@@ -48,3 +48,12 @@ a {
   text-align: center;
   font-size: 1.5rem;
 }
+
+.population {
+  width: 20%;
+  height: 10%;
+  border: 1px solid black;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
