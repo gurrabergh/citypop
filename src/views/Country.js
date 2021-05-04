@@ -59,15 +59,14 @@ class City extends React.Component {
     countryList.forEach(part => {
       part.toLowerCase();
       part = part.charAt(0).toUpperCase() + part.slice(1);
-      countryString += part + " ";
+      countryString += part + ' ';
     });
     return countryString.slice(0, -1);
   }
 
   goBack = () => {
     this.props.history.push({
-      pathname: '/',
-      state: { detail: ''}
+      pathname: '/'
     })
   }
 

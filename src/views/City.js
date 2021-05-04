@@ -37,8 +37,7 @@ class City extends React.Component {
 
   goBack = () => {
     this.props.history.push({
-      pathname: '/',
-      state: { detail: ''}
+      pathname: '/'
     })
   }
 
