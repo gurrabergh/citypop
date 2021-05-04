@@ -5,8 +5,10 @@ class Start extends React.Component {
     return (
       <main>
         <h1>CityPop</h1>
+        <div className="start">
         <Link to='/search-city' ><button className='start-button'>SEARCH BY CITY</button></Link>
         <Link to='/search-country'><button className='start-button'>SEARCH BY COUNTRY</button></Link>
+        </div>
       </main>
     );
   }
