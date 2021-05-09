@@ -1,8 +1,9 @@
 import React from 'react';
 import UndoIcon from '@material-ui/icons/Undo';
 import SyncLoader from 'react-spinners/SyncLoader';
+import PropTypes from 'prop-types';
 
-class City extends React.Component {
+class Country extends React.Component {
   constructor(props) {
     super(props);
     this.country = this.props.location.state.detail.toLowerCase();
@@ -66,7 +67,7 @@ class City extends React.Component {
 
   goBack = () => {
     this.props.history.push({
-      pathname: '/'
+      pathname: '/search-country'
     })
   }
 
@@ -95,4 +96,9 @@ class City extends React.Component {
   }
 }
 
-export default City;
+Country.propTypes = {
+  location: PropTypes.string,
+  history: PropTypes.object,
+};
+
+export default Country;

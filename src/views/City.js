@@ -2,6 +2,7 @@ import React from 'react';
 import user from '../user.js';
 import UndoIcon from '@material-ui/icons/Undo';
 import SyncLoader from "react-spinners/SyncLoader";
+import PropTypes from 'prop-types';
 
 class City extends React.Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class City extends React.Component {
 
   goBack = () => {
     this.props.history.push({
-      pathname: '/'
+      pathname: '/search-city'
     })
   }
 
@@ -66,5 +67,9 @@ class City extends React.Component {
   }
 }
 
+City.propTypes = {
+  location: PropTypes.string,
+  history: PropTypes.object,
+};
 
 export default City;

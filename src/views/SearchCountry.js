@@ -1,5 +1,7 @@
 import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
+import PropTypes from 'prop-types';
+import UndoIcon from '@material-ui/icons/Undo';
 
 class SearchCountry extends React.Component {
   constructor(props) {
@@ -23,6 +25,12 @@ class SearchCountry extends React.Component {
     })
   }
 
+  goBack = () => {
+    this.props.history.push({
+      pathname: '/'
+    })
+  }
+
   render() {
     const message = this.message;
     let msg;
@@ -38,9 +46,15 @@ class SearchCountry extends React.Component {
         <input type='text' placeholder='Enter a country' className='searchInput' onChange={this.updateInput}></input>
         </form>
         <button id='search' onClick={this.searchCountry}><SearchIcon className='search'/></button>
+        <button id='search' onClick={this.goBack}><UndoIcon className='search'/></button>
       </main>
     );
   }
 }
+
+SearchCountry.propTypes = {
+  location: PropTypes.string,
+  history: PropTypes.object,
+};
 
 export default SearchCountry;
